@@ -8,8 +8,8 @@
 ![screenshot](https://raw.githubusercontent.com/rafaelpoveronferreira/rafaelpoveronferreira.github.io/source-code/static/screenshot4.png)
 
 ## Execute localmente
-### 1. Execute uma pull do branch source-code e instale as dependências
-No branch source code, execute:
+### 1. Execute uma pull do branch master e instale as dependências
+Na branch master, execute:
 ```sh
 $ npm install
 ```
