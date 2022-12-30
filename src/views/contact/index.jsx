@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Contact = () => {
     return (
         <section id='contact' className="w-full h-screen flex flex-col justify-center items-center relative">
-            <a href="#projects" className='absolute top-6 left-1/2 -translate-x-1/2 w-10 h-10'>
+            <a href="#projects" className='absolute top-6 left-1/2 -translate-x-1/2 w-10 h-10 z-50'>
                 <FontAwesomeIcon 
                 icon={faCircleChevronUp} color='rgba(255,255,255,0.5)' size="2xl" className='opacity-50 hover:opacity-100 duration-300'/>
             </a>
