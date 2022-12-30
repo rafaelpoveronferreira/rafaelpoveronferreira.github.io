@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bgsides1: rgb(98,0,234);
+    --bgcenter1: rgb(236,64,122);
+
+    font-family: Comfortaa, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    scroll-behavior: smooth;
+    overflow: hidden;
+
+    /* base rem dinâmica a partir da qual responsividade é garantida */
+    @apply text-[6px] sm:text-[10px] md:text-[10px] lg:text-[15px]
+  }
+
+
+  body {
+    @apply bg-gradient-to-r from-[rgb(66,53,14)] via-[#BA8B02] to-[rgb(66,53,14)] bg-200% animate-background
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    @apply  text-4xl; 
+  }
+
+  h2 {
+    @apply  text-7xl; 
+  }
+
+  h3 {
+    @apply  text-5xl; 
+  }
+
+  h4 {
+    @apply text-xl; 
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 100vh;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #404040;
+    border-radius: 100vh;
+    border: 1px solid #505050;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    transform: scaleX(110%);
+    background: #606060;
+  }
+
+
+}
+
+@layer utilities {
+  .tile-mask {
+    @apply bg-dark-gray absolute h-[calc(100%_-_1px)] w-[calc(100%_-_1px)] top-[1px] left-[1px]
+  }
+}
