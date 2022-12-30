@@ -27,7 +27,11 @@ const Presentation = ({handleOnClick, toggle}) => {
 
             presentationImg.current.classList.add('delay-1000', 'opacity-80')
             presentationImg.current.classList.remove('opacity-0', 'translate-x-[200%]')
-            setTimeout(()=>presentationImg.current.classList.remove('delay-1000'), 1000)
+            setTimeout(()=>{
+                presentationImg.current.classList.remove('delay-1000')
+                presentationIcon.current.classList.remove('delay-1000')
+                presentationHeader.current.classList.remove('delay-1000')
+            }, 1000)
         } else {
             // Usuário ligou a máscara, portanto o atual timer da animação de typing será desligada  
             // pela função presentationTypingAnimation, que retornará null
@@ -73,10 +77,10 @@ const Presentation = ({handleOnClick, toggle}) => {
             <a href="#projects" >
                 <div ref={presentationIcon}
                     className="absolute text-fading-white-50 select-none duration-300 
-                    top-[83%] left-1/2 -translate-x-1/2 opacity-0 -z-50 translate-y-[350%] flex flex-col gap-8 sm:gap-4 lg:gap-3">
-                    <span className="text-center text-4xl sm:text-2xl lg:text-sm">clique para ver meu portfolio</span>
+                    top-[83%] left-1/2 -translate-x-1/2 opacity-0 -z-50 translate-y-[350%] flex flex-col gap-4 sm:gap-4 lg:gap-0">
+                    <span className="text-center text-3xl sm:text-2xl md:text-2xl lg:text-[1.1rem]">clique para ver meu portfolio</span>
                     <FontAwesomeIcon icon={faCircleChevronDown} color='rgba(255,255,255,0.5)' size="3x"
-                        className="scale-150 sm:scale-100" />
+                        className="scale-110 sm:scale-100 lg:scale-75" />
                 </div>
             </a>
             

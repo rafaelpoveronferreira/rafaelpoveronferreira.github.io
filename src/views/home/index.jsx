@@ -30,10 +30,22 @@ const Home = () => {
         // Desliga ou liga a máscara
         setToggle(!toggle)
 
+        // Calcula tempo da animação com base no tamanho da tela
+        const delay = window.innerWidth<=640?350:150
+
         anime({
-            targets: '.tile-mask, #grid-mask-header',
+            targets: '.tile-mask',
             opacity: !toggle?0:1,
-            delay: anime.stagger(30, {
+            delay: anime.stagger(delay, {
+                grid: [columns, rows],
+                from: ev
+            })
+        })
+
+        anime({
+            targets: '#grid-mask-header',
+            opacity: !toggle?0:1,
+            delay: anime.stagger(toggle?delay:delay/2, {
                 grid: [columns, rows],
                 from: ev
             })
