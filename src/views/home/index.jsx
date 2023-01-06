@@ -12,12 +12,16 @@ const Home = () => {
     // toggle setado em true quando a máscara está desativada; para false quando a máscada esta ativada
     const [toggle, setToggle] = useState(false)
 
+    const [isAnimeComplete, setIsAnimeComplete] = useState(true)
+
     const handleOnClick = (ev) => {
+        if(isAnimeComplete) {
+        setIsAnimeComplete(false)
         // Recalcula quantidade de colunas e linhas para que seja renderizada a animação
         const columns = Math.floor(window.innerWidth/TILESIZE);
         const rows = Math.floor(window.innerHeight/TILESIZE);
         
-        /* Caso o usuário clicou sobre algum elemento sobreposto ao grid, ev será evento e não id do tile.
+        /* Caso o usuário tenha clicado sobre algum elemento sobreposto ao grid, ev será evento e não id do tile.
         Assim, isNan(ev) verifica qual a natureza do clique.
         Caso seja evento, o ID do tile clicado é calculado.
         Assim, o efeito é renderizado corretamente mesmo que o usuário tenha clicado em um elemento sobreposto ao grid!
@@ -39,7 +43,10 @@ const Home = () => {
             delay: anime.stagger(delay, {
                 grid: [columns, rows],
                 from: ev
-            })
+            }),
+            complete: ()=>{
+                setIsAnimeComplete(true)
+            }
         })
 
         anime({
@@ -50,6 +57,7 @@ const Home = () => {
                 from: ev
             })
         })
+    }
     }
 
     return (

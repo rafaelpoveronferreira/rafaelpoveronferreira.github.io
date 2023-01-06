@@ -1,13 +1,14 @@
-import { TECHS } from '../../../global/constants.js'
+import { useContext } from "react";
+import { LanguageContext } from "../../../context/config";
+
 
 const TechList = () => {
-    // Responsividade (necessário otimizar com CSS puro)
-    //const TECHSCONCAT = window.innerWidth<=640?[['',''],['',''],['',''],['','']].concat(TECHS):TECHS;
-
+    const {dictionary} = useContext(LanguageContext)
+    
     return (
-        <div className='text-center h-[8%] lg:h-[15%] w-full flex justify-center overflow-x-auto overflow-y-hidden gap-6 
+        <div className='text-center h-[11%] lg:h-[15%] w-full flex justify-center overflow-x-auto overflow-y-hidden gap-6 
         border-b border-b-solid border-fading-white-10 bg-fading-white-5'>
-            {TECHS.map((e,i)=>
+            {dictionary.projects[0].techList.map((e,i)=>
                 <div key={i} className='min-w-fit h-full text-center
                 group/icon opacity-70 hover:opacity-100 active:opacity-100'>
                     <img src={e[0]} alt={e[1]} 

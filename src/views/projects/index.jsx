@@ -9,7 +9,7 @@ import { faCircleChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 const Projects = () => {
     return (
-        <section id="projects" className="w-full h-screen flex flex-col justify-between">
+        <section id="projects" className="relative w-full h-screen flex flex-col justify-between">
             <SVG rotate={'rotate-180'}/>
 
             <div className="bg-dark-gray w-full h-[82%] flex flex-col gap-6 justify-center items-center ">
