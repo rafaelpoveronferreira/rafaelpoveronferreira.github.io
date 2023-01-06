@@ -1,6 +1,7 @@
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faCircleChevronUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { TextContact } from '../../context/Text';
 
 const Contact = () => {
     return (
@@ -10,7 +11,7 @@ const Contact = () => {
                 icon={faCircleChevronUp} color='rgba(255,255,255,0.5)' size="2xl" className='opacity-50 hover:opacity-100 duration-300'/>
             </a>
             <h2 className="absolute top-1/4 text-center text-fading-white-30 w-full h-20 select-none duration-300">
-                Vamos conversar?</h2>
+                <TextContact tid='header'/></h2>
             <div className="absolute top-1/3 left-1/2 
                 -translate-x-1/2 sm:translate-x-0 translate-y-1/4 sm:translate-y-0
                 scale-125 sm:scale-100

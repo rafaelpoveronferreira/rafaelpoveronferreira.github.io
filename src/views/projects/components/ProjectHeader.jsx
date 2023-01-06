@@ -1,7 +1,9 @@
 import niehs from '../../../assets/NIEHS.png'
+import { TextProjects } from '../../../context/Text';
+
 const ProjectHeader = () => {
     return (
-        <a href='http://niehs.github.io' target={'_blank'}
+        <a href='http://rafaelpoveronferreira.github.io/NIEHS-ecommerce-react' target={'_blank'}
             className='h-[30%] w-full flex flex-col items-center justify-center sm:flex-row 
                 border-b border-b-solid border-fading-white-10 cursor-pointer 
                 text-3xl md:text-2xl lg:text-lg text-center'>
@@ -11,7 +13,7 @@ const ProjectHeader = () => {
             </img>
             <div className='w-full h-1/5 sm:h-full sm:w-3/5 
             flex flex-col items-center justify-center p-5 text-fading-white-80'>
-                <span className='-translate-y-2 sm:translate-y-0'>Comércio Eletrônico full-stack</span>
+                <span className='-translate-y-2 sm:translate-y-0'><TextProjects tid='title' /></span>
             </div>
         </a>
     )
